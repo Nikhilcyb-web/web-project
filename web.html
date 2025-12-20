@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Daily | Sci-Fi & Tech News</title>
+    <style>
+        /* CSS is embedded here for simplicity, typically it would be in a style.css file */
+        body {
+            background-color: #000000; /* Deep Black Background */
+            color: #CCCCCC; /* Light Gray Text */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding-top: 60px; /* Space for the fixed header */
+        }
+        .header {
+            background-color: #1a1a1a; /* Slightly lighter black for contrast */
+            padding: 15px 30px;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+            border-bottom: 1px solid #00FFFF; /* Neon Blue Accent Line */
+        }
+        .logo {
+            color: #00FFFF; /* Neon Blue */
+            font-size: 1.8em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav a {
+            color: #a9d9f3;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            transition: color 0.1s;
+        }
+        .nav a:hover, .nav a.active {
+            color: #8f8ff8; /* Cyber Red Hover/Active Color */
+        }
+        .container {
+            max-width: 1600px;
+            margin: 30px auto;
+            padding: 0 30px;
+        }
+        .section-title {
+            color: #efa2c9; /* Neon Blue Title */
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        /* Top Story Styling */
+        .top-story {
+            display: flex;
+            background-color: #121212;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 5px solid  #efa2c9; /* Highlight */
+        }
+        .story-image {
+            flex: 1;
+            max-width: 40%;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .story-content {
+            flex: 1;
+            padding-left: 30px;
+        }
+        .story-content h2 {
+            color: #00FFFF;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .story-content p {
+            line-height: 1.6;
+        }
+        /* Daily Feed Styling */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .news-card {
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 4px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 3px solid transparent;
+            cursor: pointer;
+        }
+        .news-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+            border-top-color: #00FFFF;
+        }
+        .news-card h3 {
+            color: #FFFFFF;
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #00FFFF;
+            color: #000000;
+            font-size: 0.75em;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Zoom animation for the body */
+        .zoom-effect {
+            animation: zoomInOut 0.5s ease-in-out;
+        }
+
+        @keyframes zoomInOut {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">NEXUS TECH</a>
+        <nav class="nav">
+            <a href="#" class="active">News</a>
+            <a href="#videos-section">Videos</a>
+            <a href="#chat-section">Chat</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h1 class="section-title">TODAY'S TOP STORY</h1>
+            <div class="top-story">
+                <div class="story-image">
+                    <img src="https://via.placeholder.com/400x200/003366/FFFFFF?text=AI+Chip+Launch" alt="Top Story Image">
+                </div>
+                <div class="story-content">
+                    <span class="tag">AI & Hardware</span>
+                    <h2>Quantum AI Chip Breaks Speed Barrier: Implications for Global Computing</h2>
+                    <p>Researchers unveil the 'Chrono-Core,' a revolutionary processor utilizing entangled qubits, achieving computational speeds previously deemed theoretical. This development could reshape cloud infrastructure and personal devices within the decade.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="news-section">
+            <h1 class="section-title">DAILY NEWS FEED</h1>
+            <div class="news-grid">
+
+                <article class="news-card">
+                    <span class="tag">Space Exploration</span>
+                    <h3>Private Colony Mission to Mars Secures Billion-Dollar Funding</h3>
+                    <p>The 'Ares VI' project confirms its budget, pushing ahead with construction of the first orbital habitat module slated for launch in 2030.</p>
+                </article>
+
+                <article class="news-card">
+                    <span class="tag">Robotics</span>
+                    <h3>New Generation of Service Drones Pass Urban Delivery Trials</h3>
+                    <p>Silent, automated drones equipped with kinetic shielding are ready for mass deployment across major metropolitan areas by Q2 next year.</p>
+                </article>
+
+                <article class="news-card">
+                    <span class="tag">Sci-Fi Media</span>
+                    <h3>The 'Void Jumpers' Series Trailer Drops: Fans Excited for Cyberpunk Thriller</h3>
+                    <p>Initial reviews praise the neo-noir aesthetics and complex world-building of the highly anticipated streaming exclusive.</p>
+                </article>
+
+                <article class="news-card">
+                    <span class="tag">Cyber Security</span>
+                    <h3>Zero-Day Vulnerability Found in Legacy Network Protocols</h3>
+                    <p>Security firms urge immediate patch implementation as a critical flaw in an older communication standard is actively being exploited.</p>
+                </article>
+            </div>
+        </section>
+        
+        <section id="videos-section">
+            <h1 class="section-title">SHORT VIDEOS </h1>
+            <div class="news-grid">
+                 <div class="news-card" style="text-align: center;">
+                    <p style="color:#00FFFF; font-size: 1.5em;">Video Placeholder 1</p>
+                    <p>5 min: The Future of Fusion Power</p>
+                </div>
+                 <div class="news-card" style="text-align: center;">
+                    <p style="color:#00FFFF; font-size: 1.5em;">Video Placeholder 2</p>
+                    <p>1 min: Quick Tech Tool Review</p>
+                </div>
+                 <div class="news-card" style="text-align: center;">
+                    <p style="color:#00FFFF; font-size: 1.5em;">Video Placeholder 3</p>
+                    <p>10 min: Sci-Fi Film Breakdown</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="chat-section">
+            <h1 class="section-title">COMMUNITY CHAT</h1>
+            <div class="top-story" style="border-left: 5px solid #00FFFF; display: block;">
+                <p>Welcome to the Nexus Daily Community Chat. This area will host live and threaded discussions.</p>
+                <p><strong>Example Topics:</strong></p>
+                <ul>
+                    <li>#AI-Debate-Room</li>
+                    <li>#Space-News-Today</li>
+                    <li>#General-Lounge</li>
+                </ul>
+                <p>A full-featured chat requires a back-end server (like Node.js or Python) and real-time database.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Add click event listener to the News button
+        document.querySelector('.nav a.active').addEventListener('click', function(e) {
+            // Add the zoom effect class to the body
+            document.body.classList.add('zoom-effect');
+
+            // Remove the class after the animation ends
+            document.body.addEventListener('animationend', function() {
+                document.body.classList.remove('zoom-effect');
+            }, { once: true });
+        });
+    </script>
+
+</body>
+</html>
