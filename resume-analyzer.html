@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Analyzer</title>
+  <link rel="stylesheet" href="./css/resume-analyzer.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">RESUME ANALYZER</div>
+    <div class="sub">ATS + Skills + Role Fit Suggestions (client-side)</div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <h2>Upload or Paste</h2>
+
+      <div class="grid">
+        <div class="card">
+          <label class="label" for="resumeFile">Upload your resume</label>
+          <input id="resumeFile" class="file" type="file" accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg" />
+          <div class="hint">Supported: PDF/DOC/DOCX/TXT/PNG/JPG. PDF/DOCX/images may need extra libraries (paste text for best results).</div>
+
+        </div>
+
+        <div class="card">
+          <label class="label" for="resumeText">Paste resume text</label>
+          <textarea id="resumeText" class="textarea" placeholder="Paste the resume contents here..." rows="10"></textarea>
+          <div class="row">
+            <button id="analyzeBtn" class="btn primary">Analyze</button>
+            <button id="clearBtn" class="btn">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="panel results" aria-live="polite">
+      <div class="results-head">
+        <h2>Analysis Results</h2>
+        <div class="pill" id="overallPill">Overall Fit: —</div>
+      </div>
+
+      <div class="result-grid">
+        <div class="card" id="summaryCard">
+          <h3>ATS Summary</h3>
+          <div class="small" id="atsSummary">Upload/paste to analyze.</div>
+        </div>
+
+        <div class="card" id="skillsCard">
+          <h3>Detected Skills</h3>
+          <div class="chips" id="skillsChips"></div>
+        </div>
+
+        <div class="card" id="strengthsCard">
+          <h3>Strengths</h3>
+          <ul class="list" id="strengthsList"></ul>
+        </div>
+
+        <div class="card" id="gapsCard">
+          <h3>Improvements (High-impact)</h3>
+          <ul class="list" id="gapsList"></ul>
+        </div>
+
+        <div class="card" id="keywordsCard">
+          <h3>Role Keywords to Add</h3>
+          <ul class="list" id="keywordsList"></ul>
+          <div class="small" id="keywordNote"></div>
+        </div>
+
+        <div class="card" id="rolesCard">
+          <h3>Best-fit Roles</h3>
+          <div class="roles" id="rolesList"></div>
+          <div class="small" id="rolesNote"></div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        Tip: Replace generic bullet points with quantified outcomes (%, time saved, revenue, latency, test coverage, etc.).
+      </div>
+    </section>
+  </main>
+
+  <!-- Libraries (loaded) -->
+  <!-- Note: if you open the file via `file://`, some CDNs/workers can be blocked. Use a local server. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.7.4/mammoth.browser.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" defer></script>
+
+  <script src="./js/resume-analyzer.js"></script>
+</body>
+</html>
+
+
+
