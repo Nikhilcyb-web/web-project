@@ -89,5 +89,42 @@ body{
   font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top : 15px;
 }
+.github {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 350px;
+  right: 780px;
 
+}
+.github-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.instagram {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 350px;
+  right: 700px;
+
+}
+.insta-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.Leetcode{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 350px;
+  right: 620px;
+}
+.leetcode-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
 
